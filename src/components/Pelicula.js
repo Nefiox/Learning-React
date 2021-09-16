@@ -2,7 +2,6 @@ import React from 'react';
 
 function Pelicula(props) {
 
-    let genres = ['Acción', 'Drama', 'Ciencia ficción', 'Misterio'];
 
 
     return (
@@ -11,8 +10,8 @@ function Pelicula(props) {
             <p>Rating: {props.rating}</p>
             <p>Awards: {props.awards}</p>
             <ul>
-                { genres.map(genre => {
-                    return <li> {genre} </li>
+                { props.genres.map((genre, i) => {
+                    return <li key = {genre + i}> {genre} </li>
                 })}
             </ul>
         </div>
