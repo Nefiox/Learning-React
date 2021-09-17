@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Pelicula.css'
 
 function Pelicula(props) {
     let listadoDeGeneros; 
@@ -15,7 +16,7 @@ function Pelicula(props) {
     }
     return (
         <div>
-            <h2>{props.titulo}</h2>
+            <h2 className="movieTitle">{props.titulo}</h2>
             <p>Rating: {props.rating}</p>
             <p>Awards: {props.awards}</p>
             { listadoDeGeneros }
