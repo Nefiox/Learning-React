@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Pelicula from './Pelicula';
 
 
-function TiraPeliculas() {
-    return (
+class TiraPeliculas extends Component {
+    render() {
+        return (
         <div>
             <Pelicula titulo = "Avengers" rating="9.2" awards="3" generos={["Ciencia ficción", "Misterio"]} />
             <Pelicula titulo = "Parasite" rating="10" awards="10" generos={["Acción", "Drama"]} />
@@ -11,6 +12,7 @@ function TiraPeliculas() {
             <Pelicula titulo = "Her" rating="6" awards="1" generos={["Acción", "Misterio"]} />
         </div>
     );
+    }
   }
 
 export default TiraPeliculas;
