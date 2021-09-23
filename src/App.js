@@ -1,6 +1,7 @@
 // import './App.css';
 import TiraPeliculas from './components/TiraPeliculas';
 import ContenedorPublicidad from './components/ContenedorPublicidad'
+import Contador from './components/Contador'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <h2>Wooow! Publicidad!</h2>
         </ContenedorPublicidad>
         <TiraPeliculas />
-        <TiraPeliculas />
+        <Contador inicial={0} />
         <ContenedorPublicidad>
           <ul>
             <li>Publicidad 1</li>
