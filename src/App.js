@@ -6,6 +6,7 @@
 import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
+import Products from './components/Products'
 import NotFound from './components/NotFound'
 import {Link, Route, Switch} from 'react-router-dom'
 
@@ -16,6 +17,7 @@ function App() {
       <Link to="/">Home</Link> <br/>
       <Link to="/about">About</Link> <br/>
       <Link to="/contact">Contact</Link> <br/>
+      <Link to="/products/1">Products</Link> <br/>
       <Link to="/no-existe">No existe</Link> <br/>
       <hr/>
       {/* <header className="App-header">
@@ -25,6 +27,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/products/:id" component={Products} />
         <Route component={NotFound} />
       </Switch>
       {/* <main>
