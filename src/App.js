@@ -6,7 +6,8 @@
 import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
-import {Link, Route} from 'react-router-dom'
+import NotFound from './components/NotFound'
+import {Link, Route, Switch} from 'react-router-dom'
 
 
 function App() {
@@ -20,9 +21,12 @@ function App() {
       {/* <header className="App-header">
 
       </header> */}
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/contact" component={Contact} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
       {/* <main>
         <Gif />
         <ContenedorPublicidad>
