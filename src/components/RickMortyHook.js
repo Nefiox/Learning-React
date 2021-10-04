@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function RickMortyHook() {
     const [ personajes, setPersonajes ] = useState([]);
     const [ pagina, setPagina ] = useState(2);
+
+    const subtitle = useRef();
 
     useEffect( () => {
         console.log('%cSe montó el componente', 'color: green');
@@ -36,9 +38,15 @@ function RickMortyHook() {
         .catch(err => console.log(err))
     }
 
+    const cambiarH2 = () => {
+        subtitle.current.style.color = 'red';
+        subtitle.current.innerText = 'Subtitle cambiado con useRef';
+    }
+
     return (
         <div>
-            <h2>Soy el componente Rick & Morty HOOK</h2>
+            <h2 ref={subtitle}>Soy el componente Rick & Morty HOOK</h2>
+            <button onClick={cambiarH2}>Cambiar subtitulo H2</button>
             <ul>
                 { personajes.length === 0 && <p>Cargando</p> }
                 {
